@@ -2,10 +2,10 @@
 
 The Cook Book is a Full Stack Application created using Angular 7 (Front End Framework), Sails.js (Node.js Framework) and MongoDB (NoSQL Database).
 
-####Folder Structure
+#### Folder Structure
 The Sails.js framework also rests within this folder structure in `backend` folder at root location.
 
-####Steps to run the application:
+#### Steps to run the application:
 
 1. `git clone` the application locally. 
 2. run `npm install` inside `TheCookBook` folder and then inside `backend/CookBookAPI` folder.
@@ -13,7 +13,7 @@ The Sails.js framework also rests within this folder structure in `backend` fold
 4. To run Angular 7 application, run `npm run start-proxy` at root location of `TheCookBook` folder.
 5. Please make sure MongoDB is already running locally on port 27017. The Sails.js application is set to create collections on MongoDB directly but the connection should be set first.
 
-####API List
+#### API List
 
   1. GET `/loadrecipes` - To get the list of all recipes.
   2. POST `/create` - To create a new recipe and add to the database
