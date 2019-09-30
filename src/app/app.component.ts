@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TheCookBook';
+  showRecipes: boolean;
+  addRecipe: boolean;
+
+  constructor() {
+    this.addRecipe = false;
+    this.showRecipes = false;
+  }
+
+  toggleAdd(event: any) {
+
+  }
 }

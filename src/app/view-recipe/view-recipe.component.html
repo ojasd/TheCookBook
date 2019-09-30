@@ -1,0 +1,19 @@
+<div class="container">
+   <div class="row text-center">
+    <h4 class="">
+      {{recipeData.recipe_name}}
+    </h4>
+   </div>
+    <div class="column">
+      <p class="lead">Category - {{recipeData.body.categories}}</p>
+      <p class="lead">Ingredients - {{recipeData.body.ingredients}}</p>
+      <p class="lead">Total time to cook - {{recipeData.body.time}} mins</p>
+    </div>
+  <div class="column" *ngFor="let steps of recipeData.body.steps; let i = index">
+    <h5>Step {{i + 1}}</h5>
+    <p class="lead">{{steps.subTitle}}</p>
+    <img src="{{steps.images}}" alt="Image" *ngIf="steps.image !== ''"/>
+    <p class="lead">Links - {{steps.links}}</p>
+    <p class="lead">Special Instructions - {{steps.optionalContent}}</p>
+  </div>
+</div>
