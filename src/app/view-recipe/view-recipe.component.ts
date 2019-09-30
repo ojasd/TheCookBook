@@ -23,9 +23,14 @@ constructor(private activatedRoute: ActivatedRoute,
     this.subscriber = this.activatedRoute.paramMap.subscribe(
       res => {
         this.paramsKey = res['params'].recipe_name;
+        this.cookieService.set('recipeID', this.paramsKey);
         this.recipeList = JSON.parse(this.cookieService.get('recipeList'));
         this.recipeData = this.recipeList.filter(
-          recipeName => recipeName.recipe_name === this.paramsKey
+          recipeName => {
+            if (recipeName.recipe_name.body !== undefined || recipeName.recipe_name !== null) {
+            return recipeName.recipe_name === this.paramsKey;
+          }
+          }
         )[0];
       }
     );
